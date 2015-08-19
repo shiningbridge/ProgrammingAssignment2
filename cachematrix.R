@@ -50,7 +50,7 @@ cacheSolve <- function(x, ...) {
   # or has been set to 'NULL' by set() function defined in makeCacheMatrix()
   Mat <- x$get()
   # Real calculation should happen.
-  iM <- inverse(Mat,...)
+  iM <- solve(Mat)
   # Now put the iM into cache
   x$setInv(iM)
   ## Return a matrix that is the inverse of 'x'
